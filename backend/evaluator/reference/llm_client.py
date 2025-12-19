@@ -1,16 +1,19 @@
 import os
-from openai import OpenAI
+from dotenv import load_dotenv
+import google.generativeai as genai
 
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+load_dotenv()
 
 def call_llm(prompt):
-    response = client.chat.completions.create(
-        model="gpt-4o-mini",
-        messages=[
-            {"role": "system", "content": "You are an academic examiner."},
-            {"role": "user", "content": prompt}
-        ],
-        temperature=0.2
-    )
+    api_key = os.getenv("GOOGLE_API_KEY")
 
-    return response.choices[0].message.content
+    if not api_key:
+        raise RuntimeError("GOOGLE_API_KEY not set")
+
+    genai.configure(api_key=api_key)
+
+    model = genai.GenerativeModel("models/gemini-1.5-flash")
+
+    response = model.generate_content(prompt)
+
+    return response.text.strip()
