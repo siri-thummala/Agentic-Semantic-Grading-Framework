@@ -25,6 +25,22 @@ using semantic similarity and concept coverage analysis.
 - Keyword coverage: 4 marks
 - Structure & grammar: 2 marks
 
+Technologies and Components Used
+🔹 Backend
+FastAPI – REST API framework for handling evaluation requests
+Python 3 – Core backend programming language
+Pydantic – Request validation and data modeling
+Uvicorn – ASGI server for running the FastAPI application
+CORS Middleware – Enables secure communication between frontend and backend
+Swagger UI – API testing and documentation interface
+
+🔹 Frontend
+React.js – Frontend library for building user interface
+JavaScript (ES6) – Client-side logic
+HTML5 & CSS – Page structure and styling
+Fetch API – Used to send evaluation requests to backend API
+Node.js & npm – Package management and development server
+
 ## Design Philosophy
 LLMs are probabilistic and non-deterministic.  
 For academic evaluation, explainability and consistency are critical.
