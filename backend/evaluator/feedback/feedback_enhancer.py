@@ -1,4 +1,4 @@
-from backend.evaluator.reference.llm_client import call_llm
+from evaluator.reference.llm_client import call_llm
 
 def enhance_feedback(raw_feedback):
     """

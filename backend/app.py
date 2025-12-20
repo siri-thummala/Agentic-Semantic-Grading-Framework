@@ -1,9 +1,20 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 
-from backend.evaluator.main_pipeline import evaluate_answer
+
+
+from evaluator.main_pipeline import evaluate_answer
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(title="Answer Evaluation System")
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 
 class EvaluationRequest(BaseModel):

@@ -1,9 +1,9 @@
-from backend.evaluator.preprocessing.text_cleaner import clean_text
-from backend.evaluator.similarity.similarity_engine import compute_similarity
-from backend.evaluator.concept.concept_analyzer import analyze_concepts
-from backend.evaluator.score.score_calculator import calculate_score
-from backend.evaluator.feedback.feedback_generator import generate_feedback
-from backend.evaluator.feedback.feedback_enhancer import enhance_feedback
+from evaluator.preprocessing.text_cleaner import clean_text
+from evaluator.similarity.similarity_engine import compute_similarity
+from evaluator.concept.concept_analyzer import analyze_concepts
+from evaluator.score.score_calculator import calculate_score
+from evaluator.feedback.feedback_generator import generate_feedback
+from evaluator.feedback.feedback_enhancer import enhance_feedback
 
 
 
